@@ -42,7 +42,6 @@ stow [FOLDER_NAME]
 <!-- ![preview1-old-neofetch](https://github.com/sameemul-haque/dotfiles/assets/110324374/0250fcdc-dd46-4e53-9855-6630b02950fe) -->
 ![preview2](https://github.com/sameemul-haque/dotfiles/assets/110324374/86560ae3-5113-46f2-823b-60e334c67b14)
 ![preview3](https://github.com/sameemul-haque/dotfiles/assets/110324374/4f7f18aa-4337-4f68-871b-42c3986c0379)
-![preview4](https://github.com/sameemul-haque/dotfiles/assets/110324374/6614f84c-2bbe-42eb-83b4-a47d263fc9a3)
 
 ## Dotfiles are available for the following:
 | HYPRLAND | WAYBAR | ROFI | DUNST | SWAYLOCK | ALACRITTY | BASH | NEOVIM | FASTFETCH |
@@ -50,11 +49,4 @@ stow [FOLDER_NAME]
 
 ## Credits
 [![credits](https://img.shields.io/badge/rayh4444n-FF4500?style=for-the-badge&logo=reddit&logoColor=ffffff "Credits to rayh4444n")](https://www.reddit.com/r/unixporn/comments/zos11o/comment/k24i61c/)
-
-## Star History
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=sameemul-haque/dotfiles&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=sameemul-haque/dotfiles&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=sameemul-haque/dotfiles&type=Date" />
-</picture>
 
