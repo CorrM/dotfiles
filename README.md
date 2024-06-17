@@ -21,13 +21,15 @@
 git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 ```
 - Install required packages
-```diff
-+ pacman -Syu --needed stow hyprland waybar sddm alacritty dunst fastfetch pamixer bash-completion mpvpaper cliphist mpd archlinux-xdg-menu pavucontrol wl-clipboard noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd
-+ yay -S --needed swaylock-effects-git rofi-lbonn-wayland-git sddm-sugar-candy-git brillo noisetorch
+```
+pacman -Syu --needed stow hyprland waybar sddm alacritty dunst fastfetch pamixer bash-completion mpvpaper cliphist mpd archlinux-xdg-menu pavucontrol wl-clipboard noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd
+yay -S --needed swaylock-effects-git rofi-lbonn-wayland-git sddm-sugar-candy-git brillo noisetorch
 ```
 - Stow needed configurations
 ```
 cd $HOME/.dotfiles
+stow nvim
+stow hypr
 stow [FOLDER_NAME]
 ```
 - Change hyprland bindings as you need in `.config/hypr/bind.conf`
