@@ -28,9 +28,17 @@ yay -S --needed swaylock-effects-git rofi-lbonn-wayland-git sddm-sugar-candy-git
 - Stow needed configurations
 ```
 cd $HOME/.dotfiles
-stow nvim
 stow hypr
-stow [FOLDER_NAME]
+stow alacritty
+stow bash
+stow dunst
+stow fastfetch
+stow mpvpaper
+stow nvim
+stow rofi
+stow swaylock
+stow waybar
+stow zsh
 ```
 - Change hyprland bindings as you need in `.config/hypr/bind.conf`
 
