@@ -1,9 +1,10 @@
--- EXAMPLE 
-local on_attach = require("nvchad.configs.lspconfig").on_attach
-local on_init = require("nvchad.configs.lspconfig").on_init
-local capabilities = require("nvchad.configs.lspconfig").capabilities
+local config = require("nvchad.configs.lspconfig")
 
-local lspconfig = require "lspconfig"
+local on_attach = config.on_attach
+local on_init = config.on_init
+local capabilities = config.capabilities
+
+local lspconfig = require("lspconfig")
 local servers = { "html", "cssls" }
 
 -- lsps with default config
@@ -21,3 +22,10 @@ lspconfig.tsserver.setup {
   on_init = on_init,
   capabilities = capabilities,
 }
+
+-- python 
+lspconfig.pyright.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = {"python"},
+})
