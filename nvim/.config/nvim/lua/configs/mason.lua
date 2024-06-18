@@ -1,5 +1,9 @@
 return {
   ensure_installed = {
+    "yaml-language-server",
+    "yamlfix",
+    "yamllint",
+
     -- lua
     "lua-language-server",
     "stylua",
