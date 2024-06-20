@@ -1,5 +1,6 @@
 return {
   ensure_installed = {
+    -- yaml
     "yaml-language-server",
     "yamlfix",
     "yamllint",
@@ -19,5 +20,9 @@ return {
     "debugpy",
     "mypy",
     "ruff",
+
+    -- rust
+    "rust-analyzer",
+    "codelldb",
   },
 }
