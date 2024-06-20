@@ -19,7 +19,7 @@ return {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python", "yaml"},
+    ft = { "python", "yaml", "rust" },
     opts = function()
       return require "configs.null-ls"
     end,
