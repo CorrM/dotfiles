@@ -4,14 +4,21 @@ local null_ls = require "null-ls"
 return {
   sources = {
     null_ls.builtins.formatting.stylua,
-    null_ls.builtins.formatting.black,
+
+    -- yaml
     null_ls.builtins.formatting.yamlfix,
     null_ls.builtins.diagnostics.yamllint,
+
+    -- python
+    null_ls.builtins.formatting.black,
     null_ls.builtins.diagnostics.mypy,
     null_ls.builtins.diagnostics.ruff,
+
+    -- rust
+    null_ls.builtins.formatting.rustfmt,
   },
   on_attach = function(client, bufnr)
-    if client.supports_method("textDocument/formatting") then
+    if client.supports_method "textDocument/formatting" then
       vim.api.nvim_clear_autocmds {
         group = augroup,
         buffer = bufnr,
