@@ -1,10 +1,10 @@
-local config = require("nvchad.configs.lspconfig")
+local config = require "nvchad.configs.lspconfig"
 
 local on_attach = config.on_attach
 local on_init = config.on_init
 local capabilities = config.capabilities
 
-local lspconfig = require("lspconfig")
+local lspconfig = require "lspconfig"
 local servers = { "html", "cssls" }
 
 -- lsps with default config
@@ -23,16 +23,33 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
 }
 
--- python 
-lspconfig.pyright.setup({
+-- python
+lspconfig.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"python"},
-})
+  filetypes = { "python" },
+}
 
 -- yaml
-lspconfig.yamlls.setup({
+lspconfig.yamlls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = {"yaml"}
-})
+  filetypes = { "yaml" },
+}
+
+-- rust
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "rust" },
+  root_dir = function()
+    vim.fs.root(0, { "Cargo.toml" })
+  end,
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = {
+        allFeatures = true,
+      },
+    },
+  },
+}
