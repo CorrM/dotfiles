@@ -115,3 +115,4 @@ alias config='/usr/bin/git --git-dir=/home/corrm/.cfg/ --work-tree=/home/corrm'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
+if [ -f "/home/corrm/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/corrm/.config/fabric/fabric-bootstrap.inc"; fi
