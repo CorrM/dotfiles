@@ -123,3 +123,11 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Created by `pipx` on 2024-06-15 20:10:41
 export PATH="$PATH:/home/corrm/.local/bin"
 if [ -f "/home/corrm/.config/fabric/fabric-bootstrap.inc" ]; then . "/home/corrm/.config/fabric/fabric-bootstrap.inc"; fi
+
+# Created for cargo bin
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# Android
+export ANDROID_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
