@@ -5,7 +5,7 @@
 [![Hyprland](https://img.shields.io/badge/Hyprland-abd6fd?style=for-the-badge "Hyprland - A dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks")](https://hyprland.org/)
 [![Waybar](https://img.shields.io/badge/Waybar-cdd6f4?style=for-the-badge "Waybar - Highly customizable Wayland bar for Sway and Wlroots based compositors")](https://github.com/Alexays/Waybar)
 [![Bash](https://img.shields.io/badge/Bash-f2cdcd?style=for-the-badge "Bourne Again Shell")](https://www.gnu.org/software/bash/manual/bash.html)
-[![Zsh](https://img.shields.io/badge/Zsh-f2cdcd?style=for-the-badge "ZSH Shell")](https://www.gnu.org/software/bash/manual/bash.html)
+[![Zsh](https://img.shields.io/badge/Zsh-f2cdcd?style=for-the-badge "ZSH Shell")](https://www.zsh.org)
 [![Alacritty](https://img.shields.io/badge/Alacritty-cba6f7?style=for-the-badge "Alacritty - A fast, cross-platform, OpenGL terminal emulator")](https://github.com/alacritty/alacritty)
 [![Rofi](https://img.shields.io/badge/Rofi-fab387?style=for-the-badge "Rofi- A window switcher, application launcher and dmenu replacement")](https://github.com/lbonn/rofi)
 [![Cliphist](https://img.shields.io/badge/Cliphist-cdd6f4?style=for-the-badge "Cliphist - Wayland clipboard manager")](https://github.com/sentriz/cliphist)
