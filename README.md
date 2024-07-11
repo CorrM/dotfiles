@@ -14,13 +14,13 @@
 
 ## Installation
 
-### Clone the repository
+#### Clone the repository
 
 ```bash
 git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 ```
 
-### Install required packages
+#### Install required packages
 
 ```bash
 pacman -Syu
@@ -28,7 +28,7 @@ pacman -S --needed bluez bluez-utils stow waybar sddm alacritty dunst fastfetch 
 yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git sddm-sugar-candy-git brillo noisetorch nwg-look wlogout mpvpaper
 ```
 
-### Submit configurations
+#### Submit configurations
 
 ```bash
 cd $HOME/.dotfiles
@@ -45,7 +45,7 @@ stow bash --adopt && source $HOME/.bashrc
 stow zsh --adopt && source $HOME/.zshrc
 ```
 
-### ZSH
+#### ZSH
 
 ```bash
 pacman -S --needed zsh
@@ -54,9 +54,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # TODO: Oh-My-Zhs plugins install
 ```
 
-### Hyprland
+#### Hyprland
 
-Change hyprland bindings as you need in `.config/hypr/bind.conf`
+Change `hyprland` bindings as you need in `.config/hypr/bind.conf`
 
 ## Preview
 [preview](https://github.com/sameemul-haque/dotfiles/assets/110324374/3f3ad231-ba5c-42fc-9d01-6466e4550158 "dotfiles preview")
