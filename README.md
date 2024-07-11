@@ -29,7 +29,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 cd $HOME/.dotfiles
 stow hypr
 stow alacritty
-stow bash
 stow dunst
 stow fastfetch
 stow mpvpaper
@@ -37,7 +36,8 @@ stow nvim
 stow rofi
 stow swaylock
 stow waybar
-stow zsh
+stow bash --adopt
+stow zsh --adopt
 ```
 - Change hyprland bindings as you need in `.config/hypr/bind.conf`
 
