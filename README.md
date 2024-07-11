@@ -25,7 +25,7 @@ git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 ```bash
 pacman -Syu
 pacman -S --needed bluez bluez-utils stow waybar sddm alacritty dunst fastfetch pamixer bash-completion cliphist mpd archlinux-xdg-menu pavucontrol wl-clipboard noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
-yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git sddm-sugar-candy-git brillo noisetorch nwg-look wlogout mpvpaper
+yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git sddm-sugar-candy-git brillo noisetorch nwg-look wlogout mpvpaper vesktop-bin
 ```
 
 #### Submit configurations
@@ -41,6 +41,7 @@ stow nvim
 stow rofi
 stow swaylock
 stow waybar
+stow vesktop
 stow bash --adopt && source $HOME/.bashrc
 stow zsh --adopt && source $HOME/.zshrc
 ```
