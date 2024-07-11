@@ -37,7 +37,7 @@ stow rofi
 stow swaylock
 stow waybar
 stow bash --adopt
-stow zsh --adopt
+stow zsh --adopt && source $HOME/.zshrc
 ```
 - Change hyprland bindings as you need in `.config/hypr/bind.conf`
 
