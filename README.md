@@ -20,8 +20,8 @@ git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 - Install required packages
 ```
 pacman -Syu
-pacman -S --needed stow waybar sddm alacritty dunst fastfetch pamixer bash-completion mpvpaper cliphist mpd archlinux-xdg-menu pavucontrol wl-clipboard noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
-yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git sddm-sugar-candy-git brillo noisetorch nwg-look wlogout
+pacman -S --needed stow waybar sddm alacritty dunst fastfetch pamixer bash-completion cliphist mpd archlinux-xdg-menu pavucontrol wl-clipboard noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
+yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git sddm-sugar-candy-git brillo noisetorch nwg-look wlogout mpvpaper
 ```
 - Stow needed configurations
 ```
