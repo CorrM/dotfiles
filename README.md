@@ -4,7 +4,8 @@
 
 [![Hyprland](https://img.shields.io/badge/Hyprland-abd6fd?style=for-the-badge "Hyprland - A dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks")](https://hyprland.org/)
 [![Waybar](https://img.shields.io/badge/Waybar-cdd6f4?style=for-the-badge "Waybar - Highly customizable Wayland bar for Sway and Wlroots based compositors")](https://github.com/Alexays/Waybar)
-[![Bash](https://img.shields.io/badge/Bash-f2cdcd?style=for-the-badge "Bourne Again SHell")](https://www.gnu.org/software/bash/manual/bash.html)
+[![Bash](https://img.shields.io/badge/Bash-f2cdcd?style=for-the-badge "Bourne Again Shell")](https://www.gnu.org/software/bash/manual/bash.html)
+[![Zsh](https://img.shields.io/badge/Zsh-f2cdcd?style=for-the-badge "ZSH Shell")](https://www.gnu.org/software/bash/manual/bash.html)
 [![Alacritty](https://img.shields.io/badge/Alacritty-cba6f7?style=for-the-badge "Alacritty - A fast, cross-platform, OpenGL terminal emulator")](https://github.com/alacritty/alacritty)
 [![Rofi](https://img.shields.io/badge/Rofi-fab387?style=for-the-badge "Rofi- A window switcher, application launcher and dmenu replacement")](https://github.com/lbonn/rofi)
 [![Cliphist](https://img.shields.io/badge/Cliphist-cdd6f4?style=for-the-badge "Cliphist - Wayland clipboard manager")](https://github.com/sentriz/cliphist)
@@ -13,19 +14,23 @@
 
 ## Installation
 
-- Clone the repository
-```
+### Clone the repository
+
+```bash
 git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 ```
-- Install required packages
-```
+
+### Install required packages
+
+```bash
 pacman -Syu
-pacman -S --needed zsh bluez bluez-utils stow waybar sddm alacritty dunst fastfetch pamixer bash-completion cliphist mpd archlinux-xdg-menu pavucontrol wl-clipboard noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
+pacman -S --needed bluez bluez-utils stow waybar sddm alacritty dunst fastfetch pamixer bash-completion cliphist mpd archlinux-xdg-menu pavucontrol wl-clipboard noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
 yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git sddm-sugar-candy-git brillo noisetorch nwg-look wlogout mpvpaper
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-- Stow needed configurations
-```
+
+### Submit configurations
+
+```bash
 cd $HOME/.dotfiles
 stow hypr
 stow alacritty
@@ -36,10 +41,22 @@ stow nvim
 stow rofi
 stow swaylock
 stow waybar
-stow bash --adopt
+stow bash --adopt && source $HOME/.bashrc
 stow zsh --adopt && source $HOME/.zshrc
 ```
-- Change hyprland bindings as you need in `.config/hypr/bind.conf`
+
+### ZSH
+
+```bash
+pacman -S --needed zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# TODO: Oh-My-Zhs plugins install
+```
+
+### Hyprland
+
+Change hyprland bindings as you need in `.config/hypr/bind.conf`
 
 ## Preview
 [preview](https://github.com/sameemul-haque/dotfiles/assets/110324374/3f3ad231-ba5c-42fc-9d01-6466e4550158 "dotfiles preview")
