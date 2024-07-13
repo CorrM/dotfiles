@@ -32,7 +32,6 @@ pacman -S --needed noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd 
 
 ```bash
 cd $HOME/.dotfiles
-stow alacritty
 stow fastfetch
 stow bash --adopt && source $HOME/.bashrc
 ```
@@ -70,6 +69,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 cd $HOME/.dotfiles
 stow zsh --adopt && source $HOME/.zshrc
+```
+
+### Alacritty
+
+- Install Alacritty
+```bash
+pacman -S alacritty 
+```
+
+- Install our config
+```bash
+cd $HOME/.dotfiles
+stow alacritty
 ```
 
 ### NeoVim
