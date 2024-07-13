@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 34,
+  "height": 42,
   "modules-left": [
     "custom/logo",
     "hyprland/workspaces",
@@ -17,6 +17,7 @@
     "memory",
     "temperature",
     "network",
+    "bluetooth",
     "pulseaudio",
     "battery",
     "custom/power"
@@ -62,7 +63,7 @@
       "active": "󱓻",
       "urgent": "󱓻"
     },
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
@@ -96,6 +97,12 @@
     "tooltip-format": "{calendar}",
     "format-alt": "  {:%a, %d %b %Y}",
     "format": "  {:%I:%M %p}"
+  },
+  "bluetooth": {
+    "format-on": "",
+    "format-off": "!",
+    "on-click": "bluedevil-wizard", // blueman-manager
+    "tooltip-format": "{status}"
   },
   "network": {
     "format-wifi": "{icon}",
