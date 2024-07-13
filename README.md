@@ -22,7 +22,7 @@ git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 
 ```bash
 pacman -Syu
-pacman -S --needed stow sddm alacritty fastfetch bash-completion
+pacman -S --needed stow sddm fastfetch bash-completion
 pacman -S --needed bluez bluez-utils bluedevil blueman-manager
 pacman -S --needed grim slurp wl-clipboard cliphist
 pacman -S --needed noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
