@@ -1,7 +1,5 @@
 # dotfiles
 
-[![dark-config](https://img.shields.io/badge/dark_config-black?style=for-the-badge "Dark config")](https://github.com/sameemul-haque/dotfiles/tree/dark)
-
 [![Hyprland](https://img.shields.io/badge/Hyprland-abd6fd?style=for-the-badge "Hyprland - A dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks")](https://hyprland.org/)
 [![Waybar](https://img.shields.io/badge/Waybar-cdd6f4?style=for-the-badge "Waybar - Highly customizable Wayland bar for Sway and Wlroots based compositors")](https://github.com/Alexays/Waybar)
 [![Bash](https://img.shields.io/badge/Bash-f2cdcd?style=for-the-badge "Bourne Again Shell")](https://www.gnu.org/software/bash/manual/bash.html)
