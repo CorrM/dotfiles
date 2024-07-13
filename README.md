@@ -122,7 +122,7 @@ cd $HOME/.dotfiles
 stow vesktop
 ```
 
-- Install **Noisetorch** for microphone noise suppression (Don't forget to set `Noisetorch` virtual mic as default input)
+- Install **Noisetorch** for microphone noise suppression (Remember to set `Noisetorch` virtual microphone as default input)
 ```bash
 yay -S noisetorch
 ```
