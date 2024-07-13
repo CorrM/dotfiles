@@ -42,7 +42,6 @@ stow alacritty
 stow dunst
 stow fastfetch
 stow mpvpaper
-stow nvim
 stow rofi
 stow swaylock
 stow waybar
@@ -58,6 +57,32 @@ pacman -S --needed zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # TODO: Oh-My-Zhs plugins install
+```
+
+#### NeoVim
+
+- Install NvChad
+```bash
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+```
+
+- Wait `lazy.nvim` finishes downloading plugins then run `:MasonInstallAll` command.
+
+- Delete `NvChad` config
+```bash
+rm -rf ~/.config/nvim
+```
+
+- Submit our config
+```bash
+stow nvim
+```
+
+**Notes**:
+- if you face any problem you can reset NoeVim
+```bash
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
 ```
 
 #### Hyprland
