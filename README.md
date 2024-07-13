@@ -12,54 +12,72 @@
 [![Swaylock](https://img.shields.io/badge/Swaylock-f9e2af?style=for-the-badge "Swaylock - Screen locking utility for Wayland compositors")](https://github.com/mortie/swaylock-effects)
 [![Dunst](https://img.shields.io/badge/Dunst-fab387?style=for-the-badge "Dunst - Lightweight and customizable notification daemon")](https://github.com/dunst-project/dunst)
 
-## Installation
-
-#### Clone the repository
+## Clone the repository
 
 ```bash
 git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 ```
 
-#### Install required packages
+## Install required packages
 
 ```bash
 pacman -Syu
+pacman -S --needed stow sddm alacritty dunst fastfetch bash-completion cliphist
 pacman -S --needed bluez bluez-utils bluedevil blueman-manager
-pacman -S --needed archlinux-xdg-menu xorg-xhost nwg-look wlogout
-pacman -S --needed pamixer pavucontrol
 pacman -S --needed grim slurp wl-clipboard
 pacman -S --needed noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
-pacman -S --needed stow waybar sddm alacritty dunst fastfetch bash-completion cliphist mpd
-yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo noisetorch mpvpaper vesktop-bin
 ```
 
-#### Submit configurations
+## Submit configurations
 
 ```bash
 cd $HOME/.dotfiles
-stow hypr
 stow alacritty
 stow dunst
 stow fastfetch
-stow mpvpaper
+stow bash --adopt && source $HOME/.bashrc
+```
+
+### Hyprland
+
+- Install `Hyprland` and other theme dependancy
+```bash
+pacman -S waybar archlinux-xdg-menu xorg-xhost nwg-look wlogout
+pacman -S pamixer pavucontrol
+yay -S hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
+```
+
+- Install our config
+```bash
+cd $HOME/.dotfiles
+stow hypr
 stow rofi
 stow swaylock
 stow waybar
-stow vesktop
-stow bash --adopt && source $HOME/.bashrc
-stow zsh --adopt && source $HOME/.zshrc
+stow mpvpaper
 ```
 
-#### ZSH
+**Notes**:
+- Change `hyprland` bindings as you need in `.config/hypr/bind.conf`
+
+### ZSH
 
 ```bash
 pacman -S --needed zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # TODO: Oh-My-Zhs plugins install
+
+cd $HOME/.dotfiles
+stow zsh --adopt && source $HOME/.zshrc
 ```
 
-#### NeoVim
+### NeoVim
+
+- Install NeoVim
+```bash
+pacman -S --needed neovim
+```
 
 - Install NvChad
 ```bash
@@ -73,8 +91,9 @@ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 rm -rf ~/.config/nvim
 ```
 
-- Submit our config
+- Install our config
 ```bash
+cd $HOME/.dotfiles
 stow nvim
 ```
 
@@ -85,16 +104,34 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
 
-#### Hyprland
+### Vesktop
 
-Change `hyprland` bindings as you need in `.config/hypr/bind.conf`
+- Install Vesktop
+```bash
+yay -S --needed vesktop-bin
+```
+
+- Delete Vesktop config
+```bash
+rm -rf ~/.config/vesktop
+```
+
+- Install our config
+```bash
+cd $HOME/.dotfiles
+stow vesktop
+```
+
+- Install **Noisetorch** for microphone noise suppression (Don't forget to set `Noisetorch` virtual mic as default input)
+```bash
+yay -S noisetorch
+```
 
 ## Preview
 [preview](https://github.com/sameemul-haque/dotfiles/assets/110324374/3f3ad231-ba5c-42fc-9d01-6466e4550158 "dotfiles preview")
 
 
 ![preview1](https://github.com/sameemul-haque/dotfiles/assets/110324374/2212607f-9b29-4e76-bac0-4bdc0ac06bbb)
-<!-- ![preview1-old-neofetch](https://github.com/sameemul-haque/dotfiles/assets/110324374/0250fcdc-dd46-4e53-9855-6630b02950fe) -->
 ![preview2](https://github.com/sameemul-haque/dotfiles/assets/110324374/86560ae3-5113-46f2-823b-60e334c67b14)
 ![preview3](https://github.com/sameemul-haque/dotfiles/assets/110324374/4f7f18aa-4337-4f68-871b-42c3986c0379)
 
