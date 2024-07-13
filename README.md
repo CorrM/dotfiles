@@ -22,9 +22,9 @@ git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 
 ```bash
 pacman -Syu
-pacman -S --needed stow sddm alacritty dunst fastfetch bash-completion cliphist
+pacman -S --needed stow sddm alacritty fastfetch bash-completion
 pacman -S --needed bluez bluez-utils bluedevil blueman-manager
-pacman -S --needed grim slurp wl-clipboard
+pacman -S --needed grim slurp wl-clipboard cliphist
 pacman -S --needed noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
 ```
 
@@ -33,7 +33,6 @@ pacman -S --needed noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd 
 ```bash
 cd $HOME/.dotfiles
 stow alacritty
-stow dunst
 stow fastfetch
 stow bash --adopt && source $HOME/.bashrc
 ```
@@ -42,7 +41,7 @@ stow bash --adopt && source $HOME/.bashrc
 
 - Install `Hyprland` and other theme dependancy
 ```bash
-pacman -S waybar archlinux-xdg-menu xorg-xhost nwg-look wlogout
+pacman -S waybar archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst
 pacman -S pamixer pavucontrol
 yay -S hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
 ```
@@ -52,8 +51,9 @@ yay -S hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
 cd $HOME/.dotfiles
 stow hypr
 stow rofi
-stow swaylock
 stow waybar
+stow swaylock
+stow dunst
 stow mpvpaper
 ```
 
