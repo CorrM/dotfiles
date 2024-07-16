@@ -38,7 +38,7 @@ stow bash --adopt && source $HOME/.bashrc
 
 - Install `Hyprland` and other theme dependancy
 ```bash
-pacman -S waybar xdg-desktop-portal-hyprland archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst
+pacman -S waybar xdg-desktop-portal-hyprland xdg-desktop-portal-kde archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst
 pacman -S pamixer pavucontrol
 yay -S hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
 ```
