@@ -76,10 +76,12 @@ stow mpvpaper
 pacman -S --needed zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# TODO: Oh-My-Zhs plugins install
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+pacman -S zsh-autocomplete-git
 
-cd $HOME/.dotfiles
-stow zsh --adopt && source $HOME/.zshrc
+cd ~/.dotfiles
+
+stow zsh --adopt && source ~/.zshrc
 ```
 
 ### Alacritty
