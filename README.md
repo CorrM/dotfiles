@@ -23,8 +23,21 @@ pacman -Syu
 pacman -S --needed stow sddm fastfetch bash-completion
 pacman -S --needed bluez bluez-utils bluedevil blueman-manager
 pacman -S --needed grim slurp wl-clipboard cliphist
-pacman -S --needed noto-fonts ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
+pacman -S --needed noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-dejavu ttf-liberation ttf-opensans ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
 ```
+
+## Enabling ClearType rendering
+
+```bash
+pacman -S freetype2
+
+ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
+ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
+ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
+
+# Only if you will not use Hyprland execute next command
+export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
+````
 
 ## Submit configurations
 
@@ -146,5 +159,6 @@ yay -S noisetorch
 ![preview3](https://github.com/sameemul-haque/dotfiles/assets/110324374/4f7f18aa-4337-4f68-871b-42c3986c0379)
 
 ## Credits
+[![tweeks](https://img.shields.io/badge/tweeks-FF4500?style=for-the-badge&logo=reddit&logoColor=ffffff "Credits to NotAShelf")]([https://www.reddit.com/r/unixporn/comments/zos11o/comment/k24i61c/](https://gist.github.com/NotAShelf/9d5b65c34159d9896f707aa5543c97e6))
 [![credits](https://img.shields.io/badge/rayh4444n-FF4500?style=for-the-badge&logo=reddit&logoColor=ffffff "Credits to rayh4444n")](https://www.reddit.com/r/unixporn/comments/zos11o/comment/k24i61c/)
 
