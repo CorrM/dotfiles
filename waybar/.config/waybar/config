@@ -99,9 +99,10 @@
     "format": "  {:%I:%M %p}"
   },
   "bluetooth": {
+    "format-disabled": "!",
     "format-on": "",
     "format-off": "!",
-    "on-click": "bluedevil-wizard", // blueman-manager
+    "on-click": "blueman-manager", // blueman-manager || bluedevil-wizard
     "tooltip-format": "{status}"
   },
   "network": {

@@ -51,6 +51,7 @@ window#waybar.hidden {
 }
 
 #language,
+#bluetooth,
 #temperature,
 #cpu,
 #memory,
@@ -79,6 +80,10 @@ window#waybar.hidden {
   font-size: 15px;
   border-radius: 8px 0px 0px 8px;
   color: #1793d1;
+}
+
+#bluetooth {
+  background-color: #00D3FF;
 }
 
 #cpu {
