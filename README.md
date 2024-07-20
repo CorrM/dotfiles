@@ -108,10 +108,7 @@ pacman -S --needed neovim
 - Install NvChad
 ```bash
 git clone https://github.com/NvChad/starter ~/.config/nvim
-nvim
 ```
-
-- Wait `lazy.nvim` finishes downloading plugins then run `:MasonInstallAll` command.
 
 - Delete `NvChad` config
 ```bash
@@ -123,6 +120,14 @@ rm -rf ~/.config/nvim
 cd $HOME/.dotfiles
 stow nvim
 ```
+
+- Install dependencies and plugins
+
+```bash
+nvim
+```
+
+- Wait `lazy.nvim` finishes downloading plugins then run `:MasonInstallAll` command.
 
 **Notes**:
 - if you face any problem you can reset NoeVim
