@@ -107,7 +107,8 @@ pacman -S --needed neovim
 
 - Install NvChad
 ```bash
-git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+git clone https://github.com/NvChad/starter ~/.config/nvim
+nvim
 ```
 
 - Wait `lazy.nvim` finishes downloading plugins then run `:MasonInstallAll` command.
