@@ -39,6 +39,12 @@ ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
 export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
 ````
 
+# Enable bluetooth
+
+```bash
+systemctl enable --now bluetooth.service
+```
+
 ## Submit configurations
 
 ```bash
