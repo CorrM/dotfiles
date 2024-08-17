@@ -29,7 +29,7 @@ pacman -S --needed noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-dejavu ttf-lib
 ## Enabling ClearType rendering
 
 ```bash
-pacman -S freetype2
+pacman -S --needed freetype2
 
 ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
@@ -50,16 +50,16 @@ systemctl enable --now bluetooth.service
 ```bash
 cd $HOME/.dotfiles
 stow fastfetch
-stow bash --adopt && source $HOME/.bashrc
+rm $HOME/.bashrc && stow bash && source ~/.bashrc
 ```
 
 ### Hyprland
 
 - Install `Hyprland` and other theme dependancy
 ```bash
-pacman -S waybar xdg-desktop-portal-hyprland xdg-desktop-portal-kde xdg-desktop-portal-gtk archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst
-pacman -S pamixer pavucontrol
-yay -S hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
+pacman -S --needed waybar xdg-desktop-portal-hyprland xdg-desktop-portal-kde xdg-desktop-portal-gtk archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst
+pacman -S --needed pamixer pavucontrol
+yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
 ```
 
 - Install our config
@@ -87,14 +87,14 @@ yay -S zsh-autocomplete-git
 
 cd ~/.dotfiles
 
-stow zsh --adopt && source ~/.zshrc
+rm ~/.zshrc && stow zsh && source ~/.zshrc
 ```
 
 ### Alacritty
 
 - Install Alacritty
 ```bash
-pacman -S alacritty 
+pacman -S --needed alacritty 
 ```
 
 - Install our config
@@ -161,7 +161,7 @@ stow vesktop
 
 - Install **Noisetorch** for microphone noise suppression (Remember to set `Noisetorch` virtual microphone as default input)
 ```bash
-yay -S noisetorch
+yay -S --needed noisetorch
 ```
 
 ## Preview
