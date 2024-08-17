@@ -110,12 +110,7 @@ stow alacritty
 pacman -S --needed neovim
 ```
 
-- Install NvChad
-```bash
-git clone https://github.com/NvChad/starter ~/.config/nvim
-```
-
-- Delete `NvChad` config
+- Delete old config
 ```bash
 rm -rf ~/.config/nvim
 ```
