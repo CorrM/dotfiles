@@ -99,6 +99,7 @@ pacman -S --needed alacritty
 
 - Install our config
 ```bash
+rm -rf ~/.config/alacritty
 cd $HOME/.dotfiles
 stow alacritty
 ```
