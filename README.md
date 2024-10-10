@@ -97,9 +97,13 @@ rm ~/.zshrc && stow zsh && source ~/.zshrc
 pacman -S --needed alacritty 
 ```
 
-- Install our config
+- Delete old config
 ```bash
 rm -rf ~/.config/alacritty
+```
+
+- Install our config
+```bash
 cd $HOME/.dotfiles
 stow alacritty
 ```
