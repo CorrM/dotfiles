@@ -66,6 +66,7 @@ yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo 
 ```bash
 cd $HOME/.dotfiles
 stow hypr
+stow xdg-desktop-portal
 stow rofi
 stow waybar
 stow swaylock
