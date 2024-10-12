@@ -76,6 +76,8 @@ stow mpvpaper
 
 **Notes**:
 - Change `hyprland` bindings as you need in `.config/hypr/bind.conf`
+- https://github.com/hyprwm/contrib
+- https://github.com/hyprland-community/awesome-hyprland
 
 ### ZSH
 
