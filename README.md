@@ -57,7 +57,7 @@ rm $HOME/.bashrc && stow bash && source ~/.bashrc
 
 - Install `Hyprland` and other theme dependancy
 ```bash
-pacman -S --needed libva-nvidia-driver waybar xdg-desktop-portal-hyprland-git archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst
+pacman -S --needed libva-nvidia-driver waybar xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst
 pacman -S --needed pamixer pavucontrol
 yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
 ```
@@ -66,6 +66,7 @@ yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo 
 ```bash
 cd $HOME/.dotfiles
 stow hypr
+stow xdg-desktop-portal
 stow rofi
 stow waybar
 stow swaylock
@@ -75,6 +76,8 @@ stow mpvpaper
 
 **Notes**:
 - Change `hyprland` bindings as you need in `.config/hypr/bind.conf`
+- https://github.com/hyprwm/contrib
+- https://github.com/hyprland-community/awesome-hyprland
 
 ### ZSH
 
