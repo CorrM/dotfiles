@@ -22,7 +22,7 @@ git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 pacman -Syu
 pacman -S --needed stow sddm fastfetch bash-completion
 pacman -S --needed bluez bluez-utils bluedevil blueman
-pacman -S --needed grim slurp xclip wl-clipboard cliphist
+pacman -S --needed grim slurp xclip wl-clipboard cliphist xsensors fcitx5
 pacman -S --needed noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-dejavu ttf-liberation ttf-opensans ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
 ```
 
@@ -57,9 +57,9 @@ rm $HOME/.bashrc && stow bash && source ~/.bashrc
 
 - Install `Hyprland` and other theme dependancy
 ```bash
-pacman -S --needed libva-nvidia-driver waybar xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst
+pacman -S --needed libva-nvidia-driver waybar xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst jq
 pacman -S --needed pamixer pavucontrol
-yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
+yay -S --needed hyprland-git hyprpicker-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
 ```
 
 - Install our config
