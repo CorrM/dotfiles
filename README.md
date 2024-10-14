@@ -22,7 +22,7 @@ git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 pacman -Syu
 pacman -S --needed stow sddm fastfetch bash-completion
 pacman -S --needed bluez bluez-utils bluedevil blueman
-pacman -S --needed grim slurp xclip wl-clipboard cliphist xsensors
+pacman -S --needed grim slurp xclip wl-clipboard cliphist xsensors fcitx5
 pacman -S --needed noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-dejavu ttf-liberation ttf-opensans ttf-dejavu ttf-liberation ttf-jetbrains-mono-nerd otf-font-awesome
 ```
 
