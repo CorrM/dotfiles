@@ -59,7 +59,7 @@ rm $HOME/.bashrc && stow bash && source ~/.bashrc
 ```bash
 pacman -S --needed libva-nvidia-driver waybar xdg-desktop-portal-hyprland-git xdg-desktop-portal-gtk archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst
 pacman -S --needed pamixer pavucontrol
-yay -S --needed hyprland-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
+yay -S --needed hyprland-git hyprpicker-git swaylock-effects-git rofi-lbonn-wayland-git brillo mpvpaper
 ```
 
 - Install our config
