@@ -15,15 +15,27 @@
   ],
   "modules-right": [
     "tray",
-    "pulseaudio",
-    "temperature",
     "bluetooth",
     "network",
+    "pulseaudio",
+    "temperature",
     "cpu",
     "memory",
     "battery",
+    "power-profiles-daemon",
     "custom/power"
   ],
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
   "keyboard-state": {
     "numlock": true,
     "capslock": true,

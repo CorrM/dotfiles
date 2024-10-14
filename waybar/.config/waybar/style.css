@@ -53,6 +53,7 @@ window#waybar.hidden {
 #language,
 #bluetooth,
 #temperature,
+#power-profiles-daemon,
 #cpu,
 #memory,
 #custom-power,
@@ -86,6 +87,10 @@ window#waybar.hidden {
     background-color: #00d3ff;
 }
 
+#power-profiles-daemon {
+    background-color: #bdc3c7;
+}
+
 #cpu {
     background-color: #ffc300;
 }
@@ -95,7 +100,7 @@ window#waybar.hidden {
 }
 
 #temperature {
-    background-color: #ff5733;
+    background-color: #eb4d4b;
 }
 
 #battery {
