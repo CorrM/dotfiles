@@ -2,7 +2,9 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 42,
+  // "margin-left": 10,
+  // "margin-bottom": 0,
+  // "margin-right": 10,
   "modules-left": [
     "custom/logo",
     "hyprland/workspaces",
@@ -13,12 +15,12 @@
   ],
   "modules-right": [
     "tray",
+    "pulseaudio",
+    "temperature",
+    "bluetooth",
+    "network",
     "cpu",
     "memory",
-    "temperature",
-    "network",
-    "bluetooth",
-    "pulseaudio",
     "battery",
     "custom/power"
   ],
@@ -72,25 +74,32 @@
     }
   },
   "cpu": {
-    "interval": 5,
-    "format": " {usage}%",
-    "max-length": 10
+    "interval": 1,
+    //"format": " {}%", // Icon: microchip
+    "format": "{max_frequency}GHz <span color=\"black\">| {usage}%</span>",
+    "max-length": 12,
+    "min-length": 12
   },
   "memory": {
-    "interval": 5,
-    "format": "󰍛 {}%",
-    "max-length": 10
+      "interval": 5,
+      "format": "  {used:0.2f} / {total:0.0f} GB",
+      "on-click": "alacritty -e btop"
   },
   "temperature": {
-    "critical-threshold": 80,
-    "format": "{temperatureC} {icon}",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ]
+      // "thermal-zone": 1,
+      "interval": 4,
+      //"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+      "critical-threshold": 80,
+      // "format-critical": " {temperatureC}°C",
+      "format-critical": " {temperatureC}°C",
+      "format": "{icon} {temperatureC}°C",
+      "format-icons": ["", "", ""],
+      "max-length": 6,
+      "min-length": 6,
+      "on-click": "xsensors"
   },
   "tray": {
+    "icon-size": 16,
     "spacing": 10
   },
   "clock": {
@@ -117,7 +126,8 @@
     "format-ethernet": "󰀂",
     "format-alt": "󱛇",
     "format-disconnected": "󰖪",
-    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+    "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
     "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "on-click": "~/.config/rofi/wifi/wifi.sh &",
@@ -126,21 +136,26 @@
     "nospacing": 1
   },
   "pulseaudio": {
-    "format": "{icon}",
-    "format-bluetooth": "󰂰",
-    "nospacing": 1,
-    "tooltip-format": "Volume : {volume}%",
-    "format-muted": "󰝟",
+    "scroll-step": 3, // %, can be a float
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    //"format-source": "{volume}% ",
+    //"format-source-muted": "",
+    "format-source": "",
+    "format-source-muted": "",
     "format-icons": {
-      "headphone": "🎧",
-      "default": [
-        "🔈",
-        "🔉",
-        "🔊"
-      ]
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
     },
     "on-click": "pavucontrol",
-    "scroll-step": 2
+    "on-click-right": "amixer sset Master toggle"
   },
   "custom/logo": {
     "format": "  ",
@@ -186,6 +201,6 @@
   "custom/power": {
     "format": "󰤆",
     "tooltip": false,
-    "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
+    "on-click": "wlogout"
   }
 }
