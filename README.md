@@ -57,8 +57,8 @@ rm $HOME/.bashrc && stow bash && source ~/.bashrc
 
 - Install `Hyprland` and other theme dependancies
 ```shell
+pacman -S --needed qt5-wayland qt6-wayland pamixer pavucontrol pipewire wireplumber
 pacman -S --needed libva-nvidia-driver waybar xdg-desktop-portal-gtk archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst jq
-pacman -S --needed pamixer pavucontrol pipewire wireplumber
 yay -S --needed hyprland-git hyprpicker-git xdg-desktop-portal-hyprland-git swaylock-effects-git rofi-lbonn-wayland-git xwaylandvideobridge-git brillo mpvpaper
 ```
 
