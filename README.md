@@ -12,13 +12,13 @@
 
 ## Clone the repository
 
-```bash
+```shell
 git clone https://github.com/CorrM/dotfiles.git $HOME/.dotfiles
 ```
 
 ## Install required packages
 
-```bash
+```shell
 pacman -Syu
 pacman -S --needed stow sddm fastfetch bash-completion
 pacman -S --needed bluez bluez-utils bluedevil blueman
@@ -28,7 +28,7 @@ pacman -S --needed noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-dejavu ttf-lib
 
 ## Enabling ClearType rendering
 
-```bash
+```shell
 pacman -S --needed freetype2
 
 ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
@@ -41,13 +41,13 @@ export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
 
 # Enable bluetooth
 
-```bash
+```shell
 systemctl enable --now bluetooth.service
 ```
 
 ## Submit configurations
 
-```bash
+```shell
 cd $HOME/.dotfiles
 stow fastfetch
 rm $HOME/.bashrc && stow bash && source ~/.bashrc
@@ -55,15 +55,20 @@ rm $HOME/.bashrc && stow bash && source ~/.bashrc
 
 ### Hyprland
 
-- Install `Hyprland` and other theme dependancy
-```bash
+- Install `Hyprland` and other theme dependancies
+```shell
 pacman -S --needed libva-nvidia-driver waybar xdg-desktop-portal-gtk archlinux-xdg-menu xorg-xhost nwg-look wlogout dunst jq
 pacman -S --needed pamixer pavucontrol pipewire wireplumber
 yay -S --needed hyprland-git hyprpicker-git xdg-desktop-portal-hyprland-git swaylock-effects-git rofi-lbonn-wayland-git xwaylandvideobridge-git brillo mpvpaper
 ```
 
+- Remove other portal implementations (Just keep gtk and hyprland)
+```shell
+pacman -Q | grep xdg-desktop-portal-
+```
+
 - Install our config
-```bash
+```shell
 cd $HOME/.dotfiles
 stow hypr
 stow xdg-desktop-portal
@@ -81,7 +86,7 @@ stow mpvpaper
 
 ### ZSH
 
-```bash
+```shell
 pacman -S --needed zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -96,17 +101,17 @@ rm ~/.zshrc && stow zsh && source ~/.zshrc
 ### Alacritty
 
 - Install Alacritty
-```bash
+```shell
 pacman -S --needed alacritty 
 ```
 
 - Delete old config
-```bash
+```shell
 rm -rf ~/.config/alacritty
 ```
 
 - Install our config
-```bash
+```shell
 cd $HOME/.dotfiles
 stow alacritty
 ```
@@ -114,24 +119,24 @@ stow alacritty
 ### NeoVim
 
 - Install NeoVim
-```bash
+```shell
 pacman -S --needed neovim
 ```
 
 - Delete old config
-```bash
+```shell
 rm -rf ~/.config/nvim
 ```
 
 - Install our config
-```bash
+```shell
 cd $HOME/.dotfiles
 stow nvim
 ```
 
 - Install dependencies and plugins
 
-```bash
+```shell
 nvim
 ```
 
@@ -139,7 +144,7 @@ nvim
 
 **Notes**:
 - if you face any problem you can reset NoeVim
-```bash
+```shell
 rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 ```
@@ -147,23 +152,23 @@ rm -rf ~/.cache/nvim
 ### Vesktop
 
 - Install Vesktop
-```bash
+```shell
 yay -S --needed vesktop-bin
 ```
 
 - Delete Vesktop config
-```bash
+```shell
 rm -rf ~/.config/vesktop
 ```
 
 - Install our config
-```bash
+```shell
 cd $HOME/.dotfiles
 stow vesktop
 ```
 
 - Install **Noisetorch** for microphone noise suppression (Remember to set `Noisetorch` virtual microphone as default input)
-```bash
+```shell
 yay -S --needed noisetorch
 ```
 
