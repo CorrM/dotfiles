@@ -89,8 +89,8 @@
     "interval": 1,
     //"format": " {}%", // Icon: microchip
     "format": "{max_frequency}GHz <span color=\"black\">| {usage}%</span>",
-    "max-length": 12,
-    "min-length": 12
+    "max-length": 14,
+    "min-length": 14
   },
   "memory": {
       "interval": 5,
